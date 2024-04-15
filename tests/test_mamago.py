@@ -1,5 +1,4 @@
 import os
-
 import allure
 from selene import browser, have
 from dotenv import load_dotenv
