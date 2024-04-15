@@ -1,14 +1,20 @@
 [tool.poetry]
 name = "qa-guru-lesson-16"
 version = "0.1.0"
-description = ""
+description = "No description"
 authors = ["Irina.Voron <yarutich.irina@gmail.com>"]
+license = "No license"
 readme = "README.md"
 packages = [{include = "qa"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+pytest = "^8.1.1"
+selene = "2.0.0rc9"
 
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.1.0"
 
 [build-system]
 requires = ["poetry-core"]
