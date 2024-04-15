@@ -1,14 +1,13 @@
-import os
 import allure
 from selene import browser, have
-from dotenv import load_dotenv
+
+from config import config
 
 
 def test_login():
-    load_dotenv()
-    login_username = os.getenv('LOGIN_USERNAME')
-    login_password = os.getenv('LOGIN_PASSWORD')
-    user_name = os.getenv('USER_NAME')
+    login_username = config.LOGIN_USERNAME
+    login_password = config.LOGIN_PASSWORD
+    user_name = config.USER_NAME
 
     with allure.step('Open login page'):
         browser.open('/auth')
