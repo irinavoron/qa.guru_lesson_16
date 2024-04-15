@@ -28,7 +28,7 @@ def browser_management():
     selenoid_password = os.getenv('SELENOID_PASSWORD')
 
     driver = webdriver.Remote(
-        command_executor=f'https://{selenoid_login}:{selenoid_password}@{selenoid_url}',
+        command_executor=f'https://{selenoid_login}:{selenoid_password}@{selenoid_url}/wd/hub',
         options=options)
 
     browser.config.driver = driver
@@ -42,5 +42,6 @@ def browser_management():
     attach.add_screenshot(browser)
     attach.add_html(browser)
     attach.add_logs(browser)
+    attach.add_video(browser)
 
     browser.quit()
